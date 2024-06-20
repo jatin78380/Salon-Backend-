@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodburl");
+mongoose.connect("urlofmongodb");
 const Admin = new mongoose.Schema({
     
 })

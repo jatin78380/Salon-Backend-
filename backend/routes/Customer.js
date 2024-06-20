@@ -1,6 +1,6 @@
 const {Router} = require("express");
 const router = Router();
-const {CustomerModel} = require("../models/CustomerModel");
+const {CustomerModel,createCustomer} = require("../models/CustomerModel");
 
 router.post("/signup",(req,res)=>{
     const {firstname,lastname,email,phone,password} = req.body;
