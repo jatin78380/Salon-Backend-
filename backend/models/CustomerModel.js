@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const zod = require('zod');
-mongoose.connect("mongodburl");
+mongoose.connect("mongodb+srv://jatin8612:Jatin%40rkblbrrk!12@cluster0.nkvwqm9.mongodb.net/saloninternship");  
+
 const CustomerSchema = new mongoose.Schema({ 
     firstname: {
         type: String,
@@ -24,7 +25,8 @@ const CustomerSchema = new mongoose.Schema({
     }
 })
 const CustomerModel = mongoose.model('customer', CustomerSchema);
-
+console.log("njb")
+console.log(typeof(phone));
 
 const CustomerZodSchema = zod.object({
     firstname: zod.string(),
