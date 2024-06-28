@@ -16,7 +16,7 @@ router.post("/signup",(req,res)=>{
     
    } 
    catch(e){
-    console.log(hi)
+    console.log(i)
    }
 })
 module.exports = router;
