@@ -25,8 +25,7 @@ const CustomerSchema = new mongoose.Schema({
     }
 })
 const CustomerModel = mongoose.model('customer', CustomerSchema);
-console.log("njb")
-console.log(typeof(phone));
+
 
 const CustomerZodSchema = zod.object({
     firstname: zod.string(),
