@@ -72,6 +72,7 @@ router.post('/address', async (req, res) => {
         stylist.postalcode = postalcode;
         await stylist.save();
         res.status(200).json({message:'Stylist address added successfully',salonId});
+        console.log(stylist);
     }
     catch (error) {
         console.error('Error updating options:', error);
