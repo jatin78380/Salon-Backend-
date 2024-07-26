@@ -12,6 +12,8 @@ const stylistSchema = new mongoose.Schema({
   businessName: { type: String, required: true },
   phone: { type: Number, required: true },
   password: { type: String, required: true },
+  phoneNumber :{type:String,required:true},
+  otp:{type:String},
   address:{type: String},
   street: {type:Number},
   city:{type:String},

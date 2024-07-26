@@ -1,6 +1,9 @@
 const { Router } = require('express');
 const router = Router();
 const StylistModel = require('../models/StylistModel');
+const uploadRouter = require('../service');
+// Use the upload router for handling file uploads
+router.use('/upload', uploadRouter);
 
 
 router.post('/signup', async (req, res) => {
