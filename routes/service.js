@@ -13,7 +13,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     return res.status(400).json({ message: "No file uploaded." });
   }
 
-  // conver the buffer to b64 string for uploading
+  // convert the buffer to b64 string for uploading
   const base64String = `data:${file.mimetype};base64,${file.buffer.toString(
     "base64"
   )}`;

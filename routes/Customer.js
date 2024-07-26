@@ -3,7 +3,7 @@ const router = Router();
 const {CustomerModel,createCustomer} = require("../models/CustomerModel");
 
 router.post("/signup",(req,res)=>{
-    console.log(JSON.stringify(req.body));
+    
     const {firstname,lastname,email,phone,password} = req.body;
     
    try{
@@ -15,8 +15,9 @@ router.post("/signup",(req,res)=>{
         res.json({message:"Customer created"})
     
    } 
+
    catch(e){
-    console.log(i)
+    console.log(e)
    }
 })
 module.exports = router;
