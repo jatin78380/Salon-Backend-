@@ -45,7 +45,7 @@ mongoose
   .then(() => {
     console.log("DB connected");
     app.listen(PORT, () => {
-      console.log("server is running");
+      console.log("server is runnig");
     });
   })
   .catch((e) => {
