@@ -57,5 +57,26 @@ router.post('/add-options', async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+router.post('/address', async (req, res) => {
+    const { salonId, address,street,city,state,postalcode } = req.body;
+    try{
+        const salon = await StylistModel.findById(stylistId);
+        if(!salon){
+            return res.status(404).json({message:'stylist not found'});
+        }
+        //updated the address,city,state,postalcode
+        stylist.address = address;
+        stylist.street = street;
+        stylist.city = city;
+        stylist.state = state;
+        stylist.postalcode = postalcode;
+        await stylist.save();
+        res.status(200).json({message:'Stylist address added successfully',salonId});
+    }
+    catch (error) {
+        console.error('Error updating options:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
 
 module.exports = router;

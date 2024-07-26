@@ -19,6 +19,7 @@ const configureCloudinary = require("./config/configureCloudinary");
 const customerrouter = require("./routes/Customer");
 const stylistrouter = require("./routes/Stylist");
 const service = require("./routes/service");
+const salonrouter = require("./routes/Salon");
 
 require("dotenv").config();
 
@@ -37,7 +38,7 @@ try {
 app.use("/service", service);
 app.use("/customer", customerrouter);
 app.use("/stylist", stylistrouter);
-
+app.use("/salon", salonrouter);
 // connect to db , then start the server
 mongoose
   .connect(process.env.DB_URL)
