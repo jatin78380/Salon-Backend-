@@ -70,6 +70,7 @@ router.post('/address', async (req, res) => {
         stylist.city = city;
         stylist.state = state;
         stylist.postalcode = postalcode;
+        stylist.country= country;
         await stylist.save();
         res.status(200).json({message:'Stylist address added successfully',salonId});
     }

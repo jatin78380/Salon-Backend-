@@ -17,7 +17,7 @@ const SalonSchema = new mongoose.Schema({
   city:{type:String},
   state:{type:String},
   postalcode:{type:Number},
-
+   country:{type:String},
   // Embed selection schema
   selection: selectionSchema,
 });
