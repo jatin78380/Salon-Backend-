@@ -13,7 +13,7 @@ const stylistSchema = new mongoose.Schema({
   phone: { type: Number, required: true },
   password: { type: String, required: true },
   address:{type: String},
-  street: {type:String},
+  street: {type:Number},
   city:{type:String},
   state:{type:String},
   postalcode:{type:Number},
