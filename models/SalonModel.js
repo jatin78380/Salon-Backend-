@@ -8,7 +8,7 @@ const serviceForSchema = new mongoose.Schema({
 
 const step1Schema = new mongoose.Schema({
     "Aesthetic medicine": { type: Boolean, default: false },
-    Barbershop: { type: Boolean, default: false },
+   "Barbershop": { type: Boolean, default: false },
     "Briads & Locs": { type: Boolean, default: false },
     "Dental & Orthodontics": { type: Boolean, default: false },
     "Hair removal": { type: Boolean, default: false },
