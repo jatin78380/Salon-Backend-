@@ -1,7 +1,8 @@
 const { Router } = require("express");
 const router = Router();
 
-const cloudinary = require("cloudinary");
+
+const cloudinary = require("cloudinary").v2;
 const multer = require("multer");
 const upload = multer();
 
@@ -37,5 +38,5 @@ router.post("/upload", upload.single("file"), async (req, res) => {
       return res.status(400).json({ message: "Upload Error" });
     });
 });
-
 module.exports = router;
+

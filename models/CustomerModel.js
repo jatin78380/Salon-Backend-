@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const zod = require("zod");
 
+
 const CustomerSchema = new mongoose.Schema({
   firstname: {
     type: String,
