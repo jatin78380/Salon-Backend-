@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const router = Router();
 
-
 const cloudinary = require("cloudinary").v2;
 const multer = require("multer");
 const upload = multer();
@@ -9,6 +8,8 @@ const upload = multer();
 // upload field name should be 'file'
 router.post("/upload", upload.single("file"), async (req, res) => {
   const file = req.file;
+
+  console.log(file);
 
   if (!file) {
     return res.status(400).json({ message: "No file uploaded." });
@@ -20,7 +21,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
   )}`;
 
   new Promise((resolve) => {
-    cloudinary.v2.uploader
+    cloudinary.uploader
       .upload_stream((error, uploadResult) => {
         return resolve(uploadResult);
       })
@@ -39,4 +40,3 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     });
 });
 module.exports = router;
-
